@@ -1,0 +1,28 @@
+# STEM probe parameters, V0(kv), Cs3(mm), Cs5(mm), df(Angstroms), apert1,2(mrad), Cc (mm), energy spread (eV)
+300.0 1.2 0.0 583.0 0.0 7.5 1.2 0.0
+# Magnitude and angle of 2-fold astigmatism (in Ang. and degrees)
+0.0 0.0
+# Magnitude and angle of 3-fold astigmatism (in Ang. and degrees)
+0.0 0.0
+# Crystal tilt x,y in mrad
+0.0 0.0
+# Number of detectors
+1
+# Detectors min,max angles(mrad) of collector (must match number of detectors)
+50.0 200.0
+# scan area xi, xf, yi, yf in angstrom
+10.0 20.0 10.0 20.0
+# slice thickness (nm)
+1.375
+# Size of probe wavefunction Nx,Ny in pixels
+1024 1024
+# size of transmission function Nx, Ny in pixels
+1024 1024
+# size of ouput image nx, ny in pixel
+64 64
+# input filename
+Si-100-8k.xyz
+# optional calculation: save STEM diffraction pattern every N steps
+0
+# do not change settings below this line, unless you know what you are doing (GPU_PROBE, SMOOTH_PROBE, num_parallel, use_hdd)
+1 1 16 0

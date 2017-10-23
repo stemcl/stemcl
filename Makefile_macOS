@@ -1,0 +1,29 @@
+CC = gcc -w -std=gnu99 -O3
+DEL = rm
+
+MLIBS = helpers.o
+WLIBS = helpers.o -framework OpenCL -L /usr/local/lib64 -L /usr/local/lib -I /usr/local/include -lclFFT -lm
+	
+stemcl: stemcl.c ${MLIBS}
+	./stringify_ocl.sh kernels.cl;
+	${CC} -o stemcl stemcl.c ${WLIBS}$
+
+prepare_test: stemcl
+	cp -r assets/ simulation/
+
+test_amd: prepare_test
+	./stemcl nvidia 0 simulation
+
+test_apple: prepare_test
+	./stemcl apple 1 simulation
+
+test_nvidia: prepare_test
+	./stemcl nvidia 0 simulation
+
+clean: 
+	rm -rf kernels.h
+	rm -rf simulation
+	rm -rf stemcl
+
+helpers.o: helpers.c
+	${CC} -c helpers.c
