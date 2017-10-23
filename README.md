@@ -46,8 +46,12 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-   
----------------------- NO WARRANTY ------------------
+The following publication is the canoncial reference to use for citing stemcl. A citation is mandatory if you want to publish data produced with stemcl. 
+Please also give the URL of the stemcl repository in your paper, namely https://github.com/stemcl/stemcl.
+
+
+NO WARRANTY 
+
 THIS PROGRAM IS PROVIDED AS-IS WITH ABSOLUTELY NO WARRANTY
 OR GUARANTEE OF ANY KIND, EITHER EXPRESSED OR IMPLIED,
 INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -58,9 +62,6 @@ PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA
 BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR
 THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH
 ANY OTHER PROGRAM). 
-------------------------------------------------------------------------
 
-The following publication is the canoncial reference to use for citing stemcl. A citation is mandatory if you want to publish data produced with stemcl. 
 
-Please also give the URL of the stemcl repository in your paper, namely https://github.com/stemcl/stemcl.
 
