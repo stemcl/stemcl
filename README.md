@@ -1,19 +1,19 @@
 # stemcl
 
 ## Requirements
-To build stemcl, you will need at least version 3.5 of cmake and a recent version of clfft. Since both of these are currently not available through apt-get on Ubuntu 16.04, they are provided as part of stemcl's repository in the vendor/ folder.
+To build stemcl, you will need at least version 3.5 of cmake, a recent version of clfft, and the OpenCL headers and library.
 
 ## Installation
 To build stemcl on Ubuntu 16.04 or later:
 
 ```
-sudo apt-get install build-essential libtiff-dev
-git clone https://github.com/stemcl/stemcl.git
-cd stemcl
-./bootstrap.sh
+sudo apt update
+sudo apt install build-essential cmake libclfft-dev libtiff-dev
+git clone https://github.com/stemcl/stemcl.git && cd stemcl
 mkdir build && cd build
 cmake ..
-make 
+make
+sudo make install
 ```
 
 To build on macOS 10.12 or later using [homebrew](https://brew.sh):
@@ -24,13 +24,14 @@ git clone https://github.com/stemcl/stemcl.git
 cd stemcl
 mkdir build && cd build
 cmake ..
-make 
+make
+sudo make install
 ```
 
 You may see some deprecation warnings because stemcl was programmed against a pretty old version of the OpenCL standard. This is normal.
 
 ## Usage
-To run stemcl you will need at least one available OpenCL platform that supports your hardware. This generally boils down to installing the correct driver for your CPU or GPU. OpenCL drivers are part of the standard installtion on macOS. For Ubuntu, the download locations of the most popular OpenCL implementations are listed below.
+To run stemcl you will need at least one available OpenCL platform that supports your hardware. This generally boils down to installing the correct driver for your CPU or GPU. OpenCL drivers are part of the standard installation on macOS. For Ubuntu, the download locations of the most popular OpenCL implementations are listed below.
 
 | CPU | GPU | Vendor | Download/Installation |
 |-----|-----|--------|-----------------------|

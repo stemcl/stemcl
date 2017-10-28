@@ -8,7 +8,7 @@ find_package(clFFT REQUIRED)
 # Library include directories
 include_directories(${OpenCL_INCLUDE_DIRS})
 include_directories(${CLFFT_INCLUDE_DIRS})
-set(LIBS ${LIBS} ${CLFFT_LIBRARIES} ${OpenCL_LIBRARY})
+set(LIBS ${LIBS} ${CLFFT_LIBRARIES} ${OpenCL_LIBRARY} m)
 
 add_executable(stemcl source/stemcl.c source/helpers.c)
 target_link_libraries(stemcl ${LIBS})
@@ -18,4 +18,3 @@ add_custom_command(TARGET stemcl POST_BUILD
                        ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:stemcl>/assets)
 # Installation
 install(TARGETS stemcl RUNTIME DESTINATION bin)
-install(FILES assets/* RUNTIME DESTINATION bin)
