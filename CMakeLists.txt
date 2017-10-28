@@ -10,7 +10,7 @@ include_directories(${OpenCL_INCLUDE_DIRS})
 include_directories(${CLFFT_INCLUDE_DIRS})
 set(LIBS ${LIBS} ${CLFFT_LIBRARIES} ${OpenCL_LIBRARY})
 
-add_executable(stemcl stemcl.c helpers.c)
+add_executable(stemcl source/stemcl.c source/helpers.c)
 target_link_libraries(stemcl ${LIBS})
 
 add_custom_command(TARGET stemcl POST_BUILD
