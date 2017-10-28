@@ -56,19 +56,19 @@ If you simulate very large specimen you may need to alter the settings in the la
 - If you run out of host memory, set `use_hdd` to 1. This will save transmission functions to disk instead of keeping them in memory. Running out of host memory can happen if you use many slices or very high resolutions for the transmission or probe functions. This will slow down you simulation! Consider buying more RAM instead.
 
 ## Benchmarks
-All times are hh:mm:ss.
+All times are hh:mm:ss and transmission and probe sizes were identical.
 
-Count | GPU Type | 512x512  |1024x1024 |2048x2048 |4096x4096 |8192x8192  |
------:+----------+---------:+---------:+---------:+---------:+----------:+
-1     | K80      | 00:01:28 |          |          |          |           |
-2     | K80      | 00:00:46 |          |          |          |           |
-4     | K80      | 00:00:24 |          |          |          |           |
-8     | K80      | 00:00:15 | 00:01:00 | 00:04:57 | 00:27:20 | 02:21:17  |
-16    | K80      | 00:00:14 | 00:00:39 | 00:02:51 | 00:14:33 | 13:02:42  |
-1     | Titan X  | 00:00:46 | 00:03:00 | 00:13:13 |          |           |
-1     |Titan X (Pascal)| 00:00:37 | 00:02:10 | 00:10:27 |          |           |
-1     | V100     | 00:00:29 | 00:01:41 | 00:10:09 |          |           |
-4     | V100     | 00:00:09 | 00:00:31 | 00:03:01 | 00:21:57 |           |
+|Count | GPU Type | 512x512  |1024x1024 |2048x2048 |4096x4096 |8192x8192  |
+|-----:|----------|---------:|---------:|---------:|---------:|----------:|
+|1     | K80      | 00:01:28 |          |          |          |           |
+|2     | K80      | 00:00:46 |          |          |          |           |
+|4     | K80      | 00:00:24 |          |          |          |           |
+|8     | K80      | 00:00:15 | 00:01:00 | 00:04:57 | 00:27:20 | 02:21:17  |
+|16    | K80      | 00:00:14 | 00:00:39 | 00:02:51 | 00:14:33 | 13:02:42  |
+|1     | Titan X  | 00:00:46 | 00:03:00 | 00:13:13 |          |           |
+|1     | Titan X (Pascal) | 00:00:37 | 00:02:10 | 00:10:27 |          |           |
+|1     | V100     | 00:00:29 | 00:01:41 | 00:10:09 |          |           |
+|4     | V100     | 00:00:09 | 00:00:31 | 00:03:01 | 00:21:57 |           |
 
 ## Seeing results
 stemcl results are written in a binary format that can be converted to TIFF images with `stemcl2tiff`, which has been moved to a separate repository at [stemcl/stemcl2tiff](https://github.com/stemcl/stemcl2tiff).
