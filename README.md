@@ -56,7 +56,7 @@ If you simulate very large specimen you may need to alter the settings in the la
 - If you run out of host memory, set `use_hdd` to 1. This will save transmission functions to disk instead of keeping them in memory. Running out of host memory can happen if you use many slices or very high resolutions for the transmission or probe functions. This will slow down you simulation! Consider buying more RAM instead.
 
 ## Benchmarks
-All times are hh:mm:ss and transmission and probe sizes were identical.
+All times are hh:mm:ss and transmission and probe sizes were identical. Parameters and specimen from the `sample/` directory were used, i.e. 40 slices, one detector, 64x64 pixels output image. Transmission precalculation and initialization times are included in the reported durations.
 
 |Count | GPU Type | 512x512  |1024x1024 |2048x2048 |4096x4096 |8192x8192  |16384x16384  |
 |-----:|----------|---------:|---------:|---------:|---------:|----------:|------------:|
@@ -69,6 +69,7 @@ All times are hh:mm:ss and transmission and probe sizes were identical.
 |    1 | Titan X (P.) | 00:00:37 | 00:02:10 | 00:10:27 |          |           |
 |    1 | V100     | 00:00:29 | 00:01:41 | 00:10:09 |          |           |
 |    4 | V100     | 00:00:09 | 00:00:31 | 00:03:01 | 00:21:57 |           |
+|    8 | V100     | 00:00:10 | 00:00:27 | 00:02:14 | 00:15:00 |           |
 
 ## Seeing results
 stemcl results are written in a binary format that can be converted to TIFF images with `stemcl2tiff`, which has been moved to a separate repository at [stemcl/stemcl2tiff](https://github.com/stemcl/stemcl2tiff).
