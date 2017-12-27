@@ -2596,7 +2596,7 @@ int readParameterFile(SimDetails *sim_details) {
     getline(&line, &line_size, parameterFile);
     
     getline(&line, &line_size, parameterFile);
-    sscanf(line, "%d %d %d\n", &GPU_PROBE_CALCULATION, &SMOOTH_PROBE, &num_parallel, &use_hdd_mem);
+    sscanf(line, "%d %d %d %d\n", &GPU_PROBE_CALCULATION, &SMOOTH_PROBE, &num_parallel, &use_hdd_mem);
     
     fclose(parameterFile);
     return 0;
