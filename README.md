@@ -2,7 +2,7 @@
 A GPU-accelerated implementation of the STEM simulation code by E. Kirkland optimized for high resolution simulation of large specimen. Stemcl uses the OpenCL API to leverage the full power of heterogenous systems including GPUs and CPUs from all major vendors.
 
 ## Running stemcl on Amazon EC2
-We provide an EC2 AMI with pre-installed versions of stemcl and all necessary drivers. This image can be used with the p2 and p3 GPU compute instance types. [Launch instance](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-16993a6c).
+We provide an EC2 AMI with pre-installed versions of stemcl and all necessary drivers. This image can be used with the p2 and p3 GPU compute instance types. [Launch instance](https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a9e861d0).
 
 ## Installation
 
