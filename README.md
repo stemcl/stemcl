@@ -92,9 +92,22 @@ it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-The following publication is the canoncial reference to use for citing stemcl. A citation is mandatory if you want to publish data produced with stemcl. 
-Please also give the URL of the stemcl repository in your paper, namely https://github.com/stemcl/stemcl.
+The following publication is the canoncial reference to use for citing stemcl. A citation is mandatory if you want to publish data produced with stemcl. Please also give the URL of the stemcl repository in your paper, namely https://github.com/stemcl/stemcl.
 
+```TeX
+@article{stemcl,
+  title = "STEMcl–A multi-GPU multislice algorithm for simulation of large structure and imaging parameter series",
+  journal = "Ultramicroscopy",
+  volume = "188",
+  pages = "24 - 30",
+  year = "2018",
+  issn = "0304-3991",
+  doi = "https://doi.org/10.1016/j.ultramic.2018.02.004",
+  url = "http://www.sciencedirect.com/science/article/pii/S0304399117304370",
+  author = "M. Radek and J.-G. Tenberge and S. Hilke and G. Wilde and M. Peterlechner",
+  keywords = "STEM, Image simulation, Multislice, Si, CuZr"
+}
+```
 
 NO WARRANTY 
 
