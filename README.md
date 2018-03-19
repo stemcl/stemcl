@@ -1,9 +1,6 @@
 # stemcl
 A GPU-accelerated implementation of the STEM simulation code by E. Kirkland optimized for high resolution simulation of large specimen. Stemcl uses the OpenCL API to leverage the full power of heterogenous systems including GPUs and CPUs from all major vendors.
 
-## Running stemcl on Amazon EC2
-We provide an EC2 AMI with pre-installed versions of stemcl and all necessary drivers. This image can be used with the p2 and p3 GPU compute instance types. [Launch instance](https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a9e861d0).
-
 ## Installation
 
 ### Requirements
@@ -54,6 +51,16 @@ If you simulate very large specimen you may need to alter the settings in the la
 
 - If you run out of GPU memory, decrease `num_parallel`. This is mostly needed for big transmission functions. For transmission sizes greater than 4096x4096 this value can be reduced to 2 without a performance penalty compared to the default value of 16.
 - If you run out of host memory, set `use_hdd` to 1. This will save transmission functions to disk instead of keeping them in memory. Running out of host memory can happen if you use many slices or very high resolutions for the transmission or probe functions. This will slow down you simulation! Consider buying more RAM instead.
+
+### Running stemcl on Amazon EC2
+We provide an EC2 AMI with pre-installed versions of stemcl and all necessary drivers. This image can be used with the p2 and p3 GPU compute instance types. [Launch instance](https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a9e861d0).
+
+### Using Docker
+A stemcl Docker image is available on Docker Hub. It is compatible with [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). Mount your specimen definition into the container.
+
+```
+docker run --runtime=nvidia -v /path/to/specimen:/root/simulation janten/stemcl stemcl nvidia 0 simulation
+```
 
 ## Benchmarks
 All times are hh:mm:ss and transmission and probe sizes were identical. Parameters and specimen from the `sample/` directory were used, i.e. 40 slices, one detector, 64x64 pixels output image. Transmission precalculation and initialization times are included in the reported durations.
