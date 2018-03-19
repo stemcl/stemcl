@@ -47,6 +47,8 @@ stemcl nvidia 0 simulation &
 stemcl nvidia 1 simulation &
 ```
 
+To distribute load across multiple hosts, simply use a shared directory for the sample definition (e.g. using NFS).
+
 If you simulate very large specimen you may need to alter the settings in the last line of the `parameter.dat` file:
 
 - If you run out of GPU memory, decrease `num_parallel`. This is mostly needed for big transmission functions. For transmission sizes greater than 4096x4096 this value can be reduced to 2 without a performance penalty compared to the default value of 16.
@@ -56,7 +58,7 @@ If you simulate very large specimen you may need to alter the settings in the la
 We provide an EC2 AMI with pre-installed versions of stemcl and all necessary drivers. This image can be used with the p2 and p3 GPU compute instance types. [Launch instance](https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a9e861d0).
 
 ### Using Docker
-A stemcl Docker image is available on Docker Hub. It is compatible with [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). Mount your specimen definition into the container.
+A stemcl Docker image is available on Docker Hub. It is compatible with [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). Mount your specimen definition into the container. Create multiple containers to use multiple GPUs.
 
 ```
 docker run --runtime=nvidia -v /path/to/specimen:/root/simulation janten/stemcl stemcl nvidia 0 simulation
