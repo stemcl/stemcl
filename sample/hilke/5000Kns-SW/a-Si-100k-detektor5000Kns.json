@@ -1,0 +1,9 @@
+{
+    "job_name": "a-Si-5000Kns-detektor-150-conf-angle-15-256x256-4Kx4Kpx",
+    "user": "svenhilke",
+    "desired_device": "MP-TitanX",
+    "absolute_data_path": "/home/svenhilke/simulation/a-Si-abkuehlen/5000Kns",
+    "sh_script": "runSTEMcl_new.sh",
+    "backup_data": false,
+    "timeout": 900000
+}
