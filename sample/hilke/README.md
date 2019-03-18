@@ -6,15 +6,13 @@ A citation is mandatory if you want to publish data produced with stemcl and the
 
 
 ```
-@article{segmented-detector,
+@article{HILKE2019,
   title = "Analysis of medium-range order based on simulated segmented ring detector STEM-images: amorphous Si",
   journal = "Ultramicroscopy",
-  volume = "",
-  pages = "",
-  year = "",
-  issn = "",
-  doi = "",
-  url = "",
+  year = "2019",
+  issn = "0304-3991",
+  doi = "https://doi.org/10.1016/j.ultramic.2019.02.023",
+  url = "http://www.sciencedirect.com/science/article/pii/S030439911830247X",
   author = "S. Hilke and J. Kirschbaum and V. Hieronymus-Schmidt and M. Radek and H. Bracht and G. Wilde and M. Peterlechner",
   keywords = "Variable resolution fluctuation electron microscopy (VR-FEM), image simulation, segmented annular ring detector, amorphous silicon, medium-range order (MRO)"
 }
