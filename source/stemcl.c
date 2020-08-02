@@ -780,7 +780,7 @@ void calculateTransmissionLayer(const float x[], const float y[],
 }
 
 int transmission_index(int x, int y, int slice) {
-    return (slice * ny * nx + x * ny + y);
+    return (slice * ny * nx + y * nx + x);
 }
 
 double wavelength(double kev) {
